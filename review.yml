@@ -1,0 +1,143 @@
+aid: options-technology
+name: Options Technology
+review:
+  question: Does Options Technology expose a public, documented API surface for its
+    financial market data business?
+  answer: true
+  date: '2026-07-21'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Options Technology is an institutional feed-infrastructure vendor, and its
+    posture is mostly what that tier implies: sales-gated, entitlement-managed,
+    with market data delivered as colocated raw and normalized feeds (multicast
+    and TCP), real-time streaming into AWS, GCP, and Azure, tickerplant snapshot
+    and time-series services, and lossless capture with raw .pcap files. The
+    options-it.com product pages route everything to sales@options-it.com; there
+    is no self-serve signup, no public pricing page, and no developer subdomain
+    on options-it.com (developer.options-it.com and docs.options-it.com do not
+    resolve). The genuine exception is the ACTIV Web One API (branded AtlasFeed
+    Web One API), inherited from the 2021 ACTIV Financial acquisition: a
+    WebSocket + WebAssembly JavaScript/TypeScript API with fully public
+    documentation, tutorials, market-data display examples, and an in-browser
+    playground at weboneapi.activfinancial.com, distributed as the public npm
+    package @activfinancial/one-api (latest 1.1.4) with an examples repo under
+    github.com/activfinancial. Authentication is username/password credentials
+    provisioned through sales entitlements - documented, but not self-serve. No
+    OpenAPI, Swagger, or AsyncAPI spec is published anywhere that was probed, so
+    nothing was harvested into openapi/. The catalog entry therefore records one
+    real public API product atop an otherwise sales-gated feed business.
+  authModel: Username/password session credentials (activOneApi.connect({ host,
+    user, password })), provisioned via sales and managed by exchange
+    entitlements. No self-serve API keys, no OAuth.
+  commercialPosture: Sales-gated; contact sales@options-it.com. No public pricing
+    page (options-it.com/pricing returns 404). Public docs and playground exist
+    for the Web One API but live credentials require a commercial agreement.
+  ownership: Founded 1993; majority investment by Abry Partners (2019). Acquired
+    ACTIV Financial in 2021, absorbing its normalized data services, API, and the
+    activfinancial.com developer/docs properties, which remain live under Options
+    IT branding.
+  deliveryChannels:
+  - channel: WebSocket
+    note: ACTIV Web One API (wss, WebAssembly client) - the only publicly
+      documented programmatic surface.
+    documented: true
+  - channel: Multicast
+    note: Normalized streaming market data via low-latency multicast delivery
+      (colocated), per options-it.com market data pages.
+    documented: true
+  - channel: TCP
+    note: Normalized streaming market data TCP delivery alternative.
+    documented: true
+  - channel: CloudStreaming
+    note: Real-time streaming market data into AWS, GCP, and Azure; vendor claims
+      first provider of real-time streaming market data into every public cloud.
+    documented: true
+  - channel: FlatFiles
+    note: Data Capture as a Service with lossless normalized capture and raw
+      .pcap files; end-of-day pricing.
+    documented: true
+  - channel: FIX
+    note: Not documented on any probed public page.
+    documented: false
+  specAvailability:
+    openapi: false
+    asyncapi: false
+    note: |
+      No machine-readable spec found. weboneapi.activfinancial.com/openapi.json
+      and /swagger.json both return 404; the Web One API is documented as
+      TypeScript interface reference documentation only. Nothing was fabricated
+      and the openapi/ directory was intentionally not created.
+  probes:
+  - url: https://www.options-it.com/
+    status: 200
+  - url: https://developer.options-it.com/
+    status: 0
+    note: Does not resolve (no DNS).
+  - url: https://docs.options-it.com/
+    status: 0
+    note: Does not resolve (no DNS).
+  - url: https://www.options-it.com/products/market-data/
+    status: 200
+  - url: https://www.options-it.com/products/market-data/market-data-feeds/
+    status: 200
+  - url: https://www.options-it.com/products/trading-infrastructure/direct-market-data/
+    status: 200
+  - url: https://www.options-it.com/activ-market-data-overview/
+    status: 200
+  - url: https://www.options-it.com/activ-support/
+    status: 200
+  - url: https://www.options-it.com/privacy-statement/
+    status: 200
+  - url: https://www.options-it.com/pricing/
+    status: 404
+  - url: https://weboneapi.activfinancial.com/
+    status: 200
+  - url: https://weboneapi.activfinancial.com/tutorials/
+    status: 200
+  - url: https://weboneapi.activfinancial.com/documentation/
+    status: 200
+  - url: https://weboneapi.activfinancial.com/playground/
+    status: 200
+  - url: https://weboneapi.activfinancial.com/openapi.json
+    status: 404
+  - url: https://weboneapi.activfinancial.com/swagger.json
+    status: 404
+  - url: https://www.activfinancial.com/
+    status: 200
+  - url: https://github.com/activfinancial
+    status: 200
+  - url: https://github.com/activfinancial/one-api-examples
+    status: 200
+  - url: https://github.com/activfinancial/one-api
+    status: 404
+    note: Referenced from one-api-examples README but private or removed; the
+      client ships publicly via npm instead.
+  - url: https://status.options-it.com/
+    status: 200
+    note: Better Stack-hosted, titled 'Options Technology status'; includes the
+      Options Support Hub component.
+sources:
+- url: https://weboneapi.activfinancial.com/tutorials/
+  type: Documentation
+  note: Documents npm install @activfinancial/one-api and
+    activOneApi.connect({ host, user, password }) with tutorial host
+    aop-ny4-replay.activfinancial.com; snapshots, subscriptions, queries,
+    time series.
+- url: https://weboneapi.activfinancial.com/documentation/
+  type: APIReference
+  note: TypeScript reference for Session, SnapshotHandle, SubscriptionHandle,
+    QueryHandle, TimeSeriesHandle, FieldId/Exchange/SymbologyId enumerations;
+    wss transport; one-api v1.1.x.
+- url: https://www.options-it.com/products/market-data/
+  type: Documentation
+  note: Raw and normalized streaming market data, multicast/TCP delivery, cloud
+    streaming to AWS/GCP/Azure, tickerplant on-demand, data capture with .pcap;
+    all routed to sales@options-it.com.
+- url: https://www.options-it.com/activ-market-data-overview/
+  type: Documentation
+  note: ACTIV market data overview under Options IT following the 2021
+    acquisition.
+- url: https://registry.npmjs.org/@activfinancial/one-api
+  type: SDK
+  note: Public npm package, dist-tag latest 1.1.4.

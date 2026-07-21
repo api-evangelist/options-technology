@@ -1,0 +1,82 @@
+aid: options-technology
+url: https://raw.githubusercontent.com/api-evangelist/options-technology/refs/heads/main/apis.yml
+name: Options Technology
+kind: company
+description: Options Technology (Options IT) is a capital markets managed services
+  and trading infrastructure provider founded in 1993, backed by private equity firm
+  Abry Partners since 2019, serving over 550 firms globally. Its market data business,
+  built on the 2021 acquisition of ACTIV Financial, sells low-latency raw and normalized
+  exchange feeds delivered over colocated multicast and TCP, real-time streaming into
+  AWS, GCP, and Azure, tickerplant snapshot and time-series services, and lossless
+  data capture with raw .pcap files. The commercial relationship is sales-gated and
+  entitlement-managed, but the ACTIV Web One API - a WebSocket plus WebAssembly
+  JavaScript API distributed via npm - has genuinely public developer documentation,
+  tutorials, and an in-browser playground at weboneapi.activfinancial.com.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial
+- Market Data
+- Real-Time
+- Streaming
+- Trading Infrastructure
+- Exchange Data
+- Managed Services
+- Low Latency
+created: '2026-07-21'
+modified: '2026-07-21'
+specificationVersion: '0.19'
+apis:
+- aid: options-technology:activ-web-one-api
+  name: ACTIV Web One API (AtlasFeed)
+  tags:
+  - Market Data
+  - WebSocket
+  - Streaming
+  - Snapshots
+  - Time Series
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://weboneapi.activfinancial.com/
+  baseURL: wss://aop-ny4-replay.activfinancial.com
+  properties:
+  - url: https://weboneapi.activfinancial.com/documentation/
+    type: Documentation
+  - url: https://weboneapi.activfinancial.com/tutorials/
+    type: GettingStarted
+  - url: https://weboneapi.activfinancial.com/playground/
+    type: Sandbox
+  - url: https://www.npmjs.com/package/@activfinancial/one-api
+    type: SDK
+  - url: https://github.com/activfinancial/one-api-examples
+    type: CodeRepository
+  description: WebSocket-based (WebAssembly) JavaScript/TypeScript market data API
+    for browser and Node.js, installed as npm package '@activfinancial/one-api'
+    (latest 1.1.4). Supports snapshots, real-time subscriptions, queries, and
+    time-series history across ACTIV's normalized multi-asset feed, with Promises,
+    async/await, and AsyncIterator interfaces. Clients connect with
+    activOneApi.connect({ host, user, password }) - tutorials document the host
+    aop-ny4-replay.activfinancial.com - and credentials are entitlement-managed
+    and provisioned by sales, not self-serve. Documentation, tutorials, examples,
+    and an in-browser playground are public; no OpenAPI or AsyncAPI spec is
+    published.
+common:
+- type: Website
+  url: https://www.options-it.com/
+- type: Portal
+  url: https://weboneapi.activfinancial.com/
+- type: Documentation
+  url: https://weboneapi.activfinancial.com/documentation/
+- type: GitHubOrganization
+  url: https://github.com/activfinancial
+- type: LinkedIn
+  url: https://www.linkedin.com/company/options-technology
+- type: Blog
+  url: https://www.options-it.com/news/
+- type: PrivacyPolicy
+  url: https://www.options-it.com/privacy-statement/
+- type: Support
+  url: https://www.options-it.com/activ-support/
+- type: StatusPage
+  url: https://status.options-it.com/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
