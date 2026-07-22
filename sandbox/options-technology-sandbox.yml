@@ -1,0 +1,28 @@
+generated: '2026-07-22'
+method: searched
+source: https://weboneapi.activfinancial.com/playground/
+notes: >-
+  The Web One API ships a public in-browser playground (a live code editor
+  seeded from every tutorial snippet, e.g. /playground/connect-disconnect)
+  wired to the replay gateway host documented in the tutorials. Tutorial code
+  uses the placeholder credentials __ACTIV_SESSION_USER_ID__ /
+  __ACTIV_SESSION_PASSWORD__ which the hosted playground substitutes at
+  runtime; the docs note "You may have to update the userId and password
+  fields". No standalone test credentials are published - live entitled
+  credentials come from sales. Recorded verbatim; nothing invented.
+playground:
+  url: https://weboneapi.activfinancial.com/playground/
+  type: in-browser code playground (WebAssembly client, live editor)
+  example: https://weboneapi.activfinancial.com/playground/connect-disconnect
+test_environment:
+  host: aop-ny4-replay.activfinancial.com
+  transport: wss
+  note: Replay gateway host used throughout the public tutorials.
+test_credentials:
+  published: false
+  placeholders: [__ACTIV_SESSION_USER_ID__, __ACTIV_SESSION_PASSWORD__]
+  note: Substituted by the hosted playground; live credentials are
+    sales-provisioned and entitlement-managed.
+fixtures:
+  examples_repo: https://github.com/activfinancial/one-api-examples
+  hosted_examples: https://weboneapi.activfinancial.com/examples

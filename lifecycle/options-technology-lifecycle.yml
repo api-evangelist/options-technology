@@ -1,0 +1,28 @@
+generated: '2026-07-22'
+method: searched
+notes: >-
+  The Web One API versions through its npm client (@activfinancial/one-api,
+  semver; 1.x since 2023) rather than a URL/date-versioned REST surface. No
+  public deprecation policy, sunset-header contract, or SLA page was found -
+  service levels are handled in commercial agreements (sales-gated business).
+  The retired ContentGateway web docs portal (webapi.activfinancial.com, now
+  a GitHub Pages 404) and the dormant cg-api client (last release 2020-02-14)
+  are observed lifecycle evidence: superseded by OnePlatform/one-api.
+versioning:
+  scheme: semver (npm client releases)
+  current: 1.1.4
+  docs: https://www.npmjs.com/package/@activfinancial/one-api
+deprecation:
+  policy_url: null
+  sunset_header: false
+  observed:
+  - surface: "@activfinancial/cg-api (ContentGateway client)"
+    status: dormant
+    note: Last release 0.16.1 (2020-02-14); former docs portal
+      webapi.activfinancial.com no longer resolves. Successor is
+      @activfinancial/one-api (OnePlatform).
+sla:
+  url: null
+  note: No public SLA; commercial agreements only.
+status_page: https://status.options-it.com/
+status_page_provider: Better Stack

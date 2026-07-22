@@ -1,0 +1,33 @@
+# Options Technology
+
+> Options Technology (Options IT) is a capital markets managed-services and trading-infrastructure provider (founded 1993, Abry Partners-backed, 550+ client firms). Its market data business — built on the 2021 ACTIV Financial acquisition — sells low-latency raw and normalized exchange feeds (colocated multicast/TCP), real-time streaming into AWS/GCP/Azure, tickerplant snapshot and time-series services, and lossless .pcap data capture. Most of the business is sales-gated and entitlement-managed; the genuinely public developer surface is the ACTIV Web One API (AtlasFeed), a WebSocket + WebAssembly JavaScript/TypeScript API with public docs, tutorials, and an in-browser playground.
+
+## APIs
+
+- [ACTIV Web One API (AtlasFeed)](https://weboneapi.activfinancial.com/): WebSocket (wss) market data API for browser and Node.js — snapshots, real-time subscriptions, queries, time-series history over ACTIV's normalized multi-asset feed. npm: `@activfinancial/one-api` (1.1.4). Auth is username/password inside `activOneApi.connect({ host, user, password })`; credentials are sales-provisioned and exchange-entitlement-managed (no self-serve). No OpenAPI/AsyncAPI is published.
+
+## Docs
+
+- [Documentation (TypeScript reference)](https://weboneapi.activfinancial.com/documentation/): Session, SnapshotHandle, SubscriptionHandle, QueryHandle, TimeSeriesHandle, FieldId/Exchange/SymbologyId enumerations
+- [Tutorials / Getting started](https://weboneapi.activfinancial.com/tutorials/): install, connect, requests, queries, snapshots, subscriptions, time series, field data
+- [Playground](https://weboneapi.activfinancial.com/playground/): in-browser live editor against the replay gateway aop-ny4-replay.activfinancial.com
+- [Examples](https://weboneapi.activfinancial.com/examples): hosted Web Component demos; source at https://github.com/activfinancial/one-api-examples
+- [Market data products](https://www.options-it.com/products/market-data/): feeds, cloud streaming, tickerplant, data capture (sales-gated)
+- [Status page](https://status.options-it.com/): Options Technology status (Better Stack)
+- [Support](https://www.options-it.com/activ-support/): ACTIV support hub; support@options-it.com
+
+## Packages
+
+- [@activfinancial/one-api](https://www.npmjs.com/package/@activfinancial/one-api): current client (WebAssembly, browser + Node)
+- [@activfinancial/cg-api](https://www.npmjs.com/package/@activfinancial/cg-api): legacy ContentGateway client (dormant since 2020)
+- Embeddable Web Components: oneapi-record-viewer, oneapi-montage-viewer, oneapi-orderbook-viewer (+ legacy cg-api viewers)
+
+## Repo artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/options-technology/refs/heads/main/apis.yml): APIs.json index of this provider
+- [Error codes](https://raw.githubusercontent.com/api-evangelist/options-technology/refs/heads/main/errors/options-technology-error-codes.yml): full StatusCode registry (97 codes) from the published TypeScript definitions
+- [Authentication profile](https://raw.githubusercontent.com/api-evangelist/options-technology/refs/heads/main/authentication/options-technology-authentication.yml)
+- [Packages](https://raw.githubusercontent.com/api-evangelist/options-technology/refs/heads/main/packages/options-technology-packages.yml)
+- [Components](https://raw.githubusercontent.com/api-evangelist/options-technology/refs/heads/main/components/options-technology-components.yml)
+- [Sandbox / playground](https://raw.githubusercontent.com/api-evangelist/options-technology/refs/heads/main/sandbox/options-technology-sandbox.yml)
+- [Release history](https://raw.githubusercontent.com/api-evangelist/options-technology/refs/heads/main/changelog/options-technology-changelog.yml)

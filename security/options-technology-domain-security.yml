@@ -1,0 +1,30 @@
+generated: '2026-07-22'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.options-it.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 11 18:00:06 2026 GMT
+  hsts: true
+  hsts_max_age: 300
+- host: weboneapi.activfinancial.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 14 07:49:58 2026 GMT
+  hsts: false
+- host: aop-ny4-replay.activfinancial.com
+  https: false
+domains:
+- domain: options-it.com
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: activfinancial.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

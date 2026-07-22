@@ -1,0 +1,31 @@
+generated: '2026-07-22'
+method: searched
+notes: >-
+  Probe record only - no /.well-known/ documents were found on any Options
+  Technology / ACTIV host. www.activfinancial.com 302-redirects every path to
+  www.options-it.com (where the same path then 404s); status.options-it.com
+  301-redirects every path to its homepage. Recorded so re-runs know these
+  surfaces were checked; no WellKnown pointer is wired because nothing exists.
+hosts:
+- host: https://www.options-it.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://weboneapi.activfinancial.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://www.activfinancial.com
+  documents:
+  - {path: /.well-known/security.txt, status: 302, note: redirects to www.options-it.com where it 404s}
+- host: https://status.options-it.com
+  documents:
+  - {path: /.well-known/security.txt, status: 301, note: redirects to status homepage}

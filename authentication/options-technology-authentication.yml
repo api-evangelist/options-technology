@@ -1,0 +1,29 @@
+generated: '2026-07-22'
+method: searched
+docs: https://weboneapi.activfinancial.com/tutorials/
+notes: >-
+  No OpenAPI exists for this provider, so this profile is captured from the
+  published Web One API tutorials and reference rather than derived from
+  securitySchemes. Authentication is a username/password session login inside
+  the WebSocket connect handshake - activOneApi.connect({ host, user,
+  password }) - resolving to a Session on success and rejecting with a
+  StatusCode (invalidUser, invalidPassword, accessDenied, notLicensed) on
+  failure. Credentials are provisioned by sales (sales@options-it.com) and
+  governed by exchange entitlements; there is no self-serve signup, no API
+  keys, and no OAuth/OIDC surface (no /.well-known/openid-configuration or
+  oauth-authorization-server on any probed host).
+summary:
+  types: [sessionCredentials]
+  self_serve: false
+  provisioning: sales / exchange entitlements
+  oauth2_flows: []
+schemes:
+- name: activOneApiSession
+  type: sessionCredentials
+  transport: wss (WebSocket, WebAssembly client)
+  description: user + password passed to activOneApi.connect({ host, user,
+    password }); session-scoped, entitlement-managed per data source.
+  failure_codes: [invalidUser, invalidPassword, accessDenied, notLicensed]
+  sources:
+  - https://weboneapi.activfinancial.com/tutorials/
+  - https://weboneapi.activfinancial.com/documentation/session/connect

@@ -1,0 +1,58 @@
+generated: '2026-07-22'
+method: searched
+source: https://www.npmjs.com/org/activfinancial
+notes: >-
+  All packages are published under the first-party @activfinancial npm scope
+  (ACTIV Financial, acquired by Options Technology in 2021). Licensed
+  CC-BY-ND-4.0. one-api (OnePlatform / AtlasFeed Web One API) is the actively
+  maintained client (1.1.4, released 2026-03-10); cg-api (ContentGateway) is
+  the legacy client - last release 0.16.1 on 2020-02-14, and its former docs
+  portal webapi.activfinancial.com no longer resolves (GitHub Pages 404).
+  The scope also ships embeddable Web Component viewers, catalogued in
+  components/options-technology-components.yml.
+packages:
+- language: javascript
+  registry: npm
+  name: "@activfinancial/one-api"
+  url: https://www.npmjs.com/package/@activfinancial/one-api
+  install: npm install @activfinancial/one-api
+  official: true
+  version: 1.1.4
+  released: '2026-03-10'
+  description: JavaScript/TypeScript (WebAssembly) client for the ACTIV
+    OnePlatform - the AtlasFeed Web One API. Browser and Node.js; WebSocket
+    transport; snapshots, subscriptions, queries, time series.
+  docs: https://weboneapi.activfinancial.com/
+  cdn: https://unpkg.com/@activfinancial/one-api
+- language: javascript
+  registry: npm
+  name: "@activfinancial/cg-api"
+  url: https://www.npmjs.com/package/@activfinancial/cg-api
+  install: npm install @activfinancial/cg-api
+  official: true
+  version: 0.16.1
+  released: '2020-02-14'
+  status: dormant
+  description: JavaScript/TypeScript (WebAssembly) client for the ACTIV
+    ContentGateway. Last released 2020; former docs portal
+    webapi.activfinancial.com is offline.
+- language: javascript
+  registry: npm
+  name: "@activfinancial/middleware"
+  url: https://www.npmjs.com/package/@activfinancial/middleware
+  install: npm install @activfinancial/middleware
+  official: true
+  version: 0.1.7
+  description: ACTIV Middleware definitions.
+- language: javascript
+  registry: npm
+  name: "@activfinancial/cg-api-explorer"
+  url: https://www.npmjs.com/package/@activfinancial/cg-api-explorer
+  official: true
+  version: 0.9.17
+  description: ACTIV ContentGateway API Explorer.
+repositories:
+- url: https://github.com/activfinancial/one-api-examples
+  note: Public examples repo for one-api (TypeScript). The one-api source repo
+    referenced from npm (github.com/activfinancial/one-api) is private/removed;
+    the client ships via npm only.

@@ -1,0 +1,126 @@
+generated: '2026-07-22'
+method: searched
+source: https://weboneapi.activfinancial.com/documentation/framework/statusCode/StatusCode
+notes: >-
+  The ACTIV Web One API (AtlasFeed) is a WebSocket/WebAssembly API, not REST -
+  errors are surfaced as a StatusCode enum rather than HTTP problem types.
+  Every rejected Promise (connect, snapshot, subscription, query, time-series)
+  carries a StatusCode; the client also ships a StatusCodeError class that
+  wraps a StatusCode with a friendly message and toJSON(). This registry is
+  the published enum from the @activfinancial/one-api 1.1.4 TypeScript
+  definitions (lib/index.d.ts), which backs the reference documentation.
+format: enum
+envelope: >-
+  Rejected Promise value / StatusCodeError.statusCode (numeric enum
+  activOneApi.StatusCode)
+error_codes:
+- {code: 0, name: success}
+- {code: 1, name: failure}
+- {code: 2, name: exit}
+- {code: 3, name: shuttingDown}
+- {code: 4, name: unhandledException}
+- {code: 5, name: unrecognized}
+- {code: 6, name: notFound}
+- {code: 7, name: timeout}
+- {code: 8, name: unchanged}
+- {code: 9, name: pending}
+- {code: 10, name: accessDenied}
+- {code: 11, name: bufferOverflow}
+- {code: 12, name: bufferUnderrun}
+- {code: 13, name: notSupported}
+- {code: 14, name: notInitialized}
+- {code: 15, name: missingArgs}
+- {code: 16, name: notOpen}
+- {code: 17, name: alreadyOpen}
+- {code: 18, name: disabled}
+- {code: 19, name: invalidEndpoint}
+- {code: 20, name: invalidComponent}
+- {code: 21, name: invalidVersion}
+- {code: 22, name: invalidLength}
+- {code: 23, name: invalidParameter}
+- {code: 24, name: invalidName}
+- {code: 25, name: invalidFormat}
+- {code: 26, name: invalidIndex}
+- {code: 27, name: invalidKey}
+- {code: 28, name: invalidFieldType}
+- {code: 29, name: invalidField}
+- {code: 30, name: invalidRecord}
+- {code: 31, name: invalidTable}
+- {code: 32, name: invalidProtocol}
+- {code: 33, name: undefinedField}
+- {code: 34, name: noPrimaryKey}
+- {code: 35, name: mismatch}
+- {code: 36, name: outOfRange}
+- {code: 37, name: stale}
+- {code: 38, name: deleted}
+- {code: 39, name: empty}
+- {code: 40, name: full}
+- {code: 41, name: heapEmpty}
+- {code: 42, name: wrongState}
+- {code: 43, name: notConnected}
+- {code: 44, name: alreadyConnected}
+- {code: 45, name: alreadyDefined}
+- {code: 46, name: notCreated}
+- {code: 47, name: alreadyExists}
+- {code: 48, name: inUse}
+- {code: 49, name: endOfData}
+- {code: 50, name: alreadyListening}
+- {code: 51, name: notShareable}
+- {code: 52, name: connectionRefused}
+- {code: 53, name: interrupted}
+- {code: 54, name: ignored}
+- {code: 55, name: tooManyRequests}
+- {code: 56, name: invalidEndpointComponent}
+- {code: 57, name: hostDeviceNotFound}
+- {code: 58, name: invalidUser}
+- {code: 59, name: invalidPassword}
+- {code: 60, name: invalidUrl}
+- {code: 61, name: notADirectory}
+- {code: 62, name: busy}
+- {code: 63, name: expired}
+- {code: 64, name: hostUnreachable}
+- {code: 65, name: networkUnreachable}
+- {code: 66, name: notLicensed}
+- {code: 67, name: addressNotAvailable}
+- {code: 68, name: noSuchDevice}
+- {code: 69, name: quotaExceeded}
+- {code: 70, name: invalidServiceId}
+- {code: 71, name: pathNotFound}
+- {code: 72, name: invalidHandle}
+- {code: 73, name: invalidAddress}
+- {code: 74, name: insufficientResources}
+- {code: 75, name: invalidRequest}
+- {code: 76, name: noProxyConfigured}
+- {code: 77, name: missingFields}
+- {code: 78, name: invalidUserType}
+- {code: 79, name: undefinedLength}
+- {code: 80, name: functionNotAvailable}
+- {code: 81, name: continue}
+- {code: 82, name: invalidSignature}
+- {code: 83, name: tableNotAvailable}
+- {code: 84, name: sourceNotFound}
+- {code: 85, name: sourceNotPermissioned}
+- {code: 86, name: relationshipNotFound}
+- {code: 87, name: relationshipNotPermissioned}
+- {code: 88, name: navigationNotFound}
+- {code: 89, name: navigationNotPermissioned}
+- {code: 90, name: targetNotFound}
+- {code: 91, name: targetNotPermissioned}
+- {code: 92, name: permissionLevelNotAvailable}
+- {code: 93, name: subscriptionNotAvailable}
+- {code: 94, name: invalidHost}
+- {code: 95, name: rejected}
+- {code: 96, name: noHeartbeat}
+- {code: 255, name: unknown}
+groups:
+- name: authentication-entitlements
+  codes: [accessDenied, invalidUser, invalidPassword, invalidUserType, notLicensed,
+    sourceNotPermissioned, relationshipNotPermissioned, navigationNotPermissioned,
+    targetNotPermissioned, permissionLevelNotAvailable]
+  note: Credential and exchange-entitlement failures - credentials are
+    provisioned by sales and permissioned per data source.
+- name: throttling-capacity
+  codes: [tooManyRequests, quotaExceeded, busy, insufficientResources, full]
+- name: connectivity
+  codes: [notConnected, connectionRefused, hostUnreachable, networkUnreachable,
+    noHeartbeat, timeout, invalidHost, invalidEndpoint]

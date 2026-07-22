@@ -1,0 +1,32 @@
+generated: '2026-07-22'
+method: searched
+url: https://www.options-it.com/about/security/
+notes: >-
+  Options Technology publishes a corporate security page (About > Security)
+  plus an InfoSec Committee page and product security-and-compliance pages.
+  The page claims "Investment Bank Grade" cybersecurity, annual key InfoSec
+  audits by security teams of the top five global banks passed consistently
+  since 2011, and investment in "gaining and retaining key SOC and ISO
+  accreditations" - but does not name specific certification levels (no
+  explicit "SOC 2" or "ISO 27001" statement on the probed pages), so
+  certifications[] records the claims as published rather than named certs.
+  No automated trust-center subdomain (trust./security.) exists; the
+  probe-security-programs.py pass found no machine-verifiable hit, so this
+  artifact is hand-searched.
+certifications: []
+claims:
+- SOC accreditations (level not named publicly)
+- ISO accreditations (standard not named publicly)
+- Annual InfoSec audits by top-five global bank security teams, passed since 2011
+pages:
+- url: https://www.options-it.com/about/security/
+  title: Security
+- url: https://www.options-it.com/about/security/infosec-committee/
+  title: InfoSec Committee
+- url: https://www.options-it.com/products/atlas/atlasworkplace/security-compliance/
+  title: AtlasWorkplace Security & Compliance
+- url: https://www.options-it.com/products/managed-security/
+  title: Managed Security
+evidence:
+- source: https://www.options-it.com/about/security/
+  keywords: [SOC, ISO, InfoSec audits, cybersecurity, compliance]

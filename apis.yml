@@ -12,7 +12,7 @@ description: Options Technology (Options IT) is a capital markets managed servic
   entitlement-managed, but the ACTIV Web One API - a WebSocket plus WebAssembly
   JavaScript API distributed via npm - has genuinely public developer documentation,
   tutorials, and an in-browser playground at weboneapi.activfinancial.com.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/options-technology.png
 tags:
 - Financial
 - Market Data
@@ -23,7 +23,7 @@ tags:
 - Managed Services
 - Low Latency
 created: '2026-07-21'
-modified: '2026-07-21'
+modified: '2026-07-22'
 specificationVersion: '0.19'
 apis:
 - aid: options-technology:activ-web-one-api
@@ -59,6 +59,8 @@ apis:
     and an in-browser playground are public; no OpenAPI or AsyncAPI spec is
     published.
 common:
+- type: DomainSecurity
+  url: security/options-technology-domain-security.yml
 - type: Website
   url: https://www.options-it.com/
 - type: Portal
@@ -77,6 +79,32 @@ common:
   url: https://www.options-it.com/activ-support/
 - type: StatusPage
   url: https://status.options-it.com/
+- type: APIReference
+  url: https://weboneapi.activfinancial.com/documentation/
+- type: GettingStarted
+  url: https://weboneapi.activfinancial.com/tutorials/
+- type: Packages
+  url: packages/options-technology-packages.yml
+- type: SDKs
+  url: packages/options-technology-packages.yml
+- type: Components
+  url: components/options-technology-components.yml
+- type: ErrorCatalog
+  url: errors/options-technology-error-codes.yml
+- type: Authentication
+  url: authentication/options-technology-authentication.yml
+- type: Lifecycle
+  url: lifecycle/options-technology-lifecycle.yml
+- type: ChangeLog
+  url: changelog/options-technology-changelog.yml
+- type: Sandbox
+  url: sandbox/options-technology-sandbox.yml
+- type: TrustCenter
+  url: security/options-technology-trust-center.yml
+- type: Compliance
+  url: https://www.options-it.com/about/security/
+- type: LLMsTxt
+  url: llms/options-technology-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

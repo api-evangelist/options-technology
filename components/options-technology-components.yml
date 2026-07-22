@@ -1,0 +1,30 @@
+generated: '2026-07-22'
+method: searched
+source: https://weboneapi.activfinancial.com/examples
+notes: >-
+  ACTIV ships genuine embeddable client-side UI components: the Web One API
+  examples are built as Web Components ("custom HTML elements that can be
+  easily imported into existing projects" - tutorials, Getting Started), each
+  published as an npm package under @activfinancial and hosted as live demos
+  on the docs site. The loader library is the corresponding client API
+  (one-api or the legacy cg-api). Distinct from the SDKs in
+  packages/options-technology-packages.yml.
+loader_libraries:
+- "@activfinancial/one-api"
+- "@activfinancial/cg-api (legacy)"
+families:
+- family: one-api web components (current)
+  components:
+  - {name: "@activfinancial/oneapi-record-viewer", version: 1.0.7, url: "https://www.npmjs.com/package/@activfinancial/oneapi-record-viewer", description: Record viewer using one-api}
+  - {name: "@activfinancial/oneapi-montage-viewer", version: 1.0.7, url: "https://www.npmjs.com/package/@activfinancial/oneapi-montage-viewer", description: Montage display using one-api}
+  - {name: "@activfinancial/oneapi-orderbook-viewer", version: 0.6.20, url: "https://www.npmjs.com/package/@activfinancial/oneapi-orderbook-viewer", description: Orderbook display using one-api}
+  demos: https://weboneapi.activfinancial.com/examples
+- family: cg-api web components (legacy)
+  components:
+  - {name: "@activfinancial/record-viewer", version: 0.7.7, url: "https://www.npmjs.com/package/@activfinancial/record-viewer", description: Record viewer using cg-api}
+  - {name: "@activfinancial/montage-viewer", version: 0.3.50, url: "https://www.npmjs.com/package/@activfinancial/montage-viewer", description: Montage display using cg-api}
+  - {name: "@activfinancial/option-chain", version: 0.5.7, url: "https://www.npmjs.com/package/@activfinancial/option-chain", description: Option chain display using cg-api}
+  - {name: "@activfinancial/news-viewer", version: 0.5.19, url: "https://www.npmjs.com/package/@activfinancial/news-viewer", description: News viewer using cg-api}
+  - {name: "@activfinancial/time-series-chart", version: 0.3.51, url: "https://www.npmjs.com/package/@activfinancial/time-series-chart", description: Time-series chart of closing prices using cg-api}
+  - {name: "@activfinancial/tpi-viewer", version: 0.1.42, url: "https://www.npmjs.com/package/@activfinancial/tpi-viewer", description: TPI viewer using cg-api}
+  - {name: "@activfinancial/chartiq-adapter", version: 0.0.38, url: "https://www.npmjs.com/package/@activfinancial/chartiq-adapter", description: ChartIQ feed-interface implementations using cg-api}
