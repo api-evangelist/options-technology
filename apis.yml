@@ -12,6 +12,18 @@ description: Options Technology (Options IT) is a capital markets managed servic
   entitlement-managed, but the ACTIV Web One API - a WebSocket plus WebAssembly
   JavaScript API distributed via npm - has genuinely public developer documentation,
   tutorials, and an in-browser playground at weboneapi.activfinancial.com.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/options-technology.png
 tags:
 - Financial
