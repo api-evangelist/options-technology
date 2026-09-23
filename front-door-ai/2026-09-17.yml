@@ -1,0 +1,29 @@
+# Front Door AI Index — options-technology — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: options-technology
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.options-it.com
+  final_host: www.options-it.com
+  ownership: own
+  owner: options-technology
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 8
+  host_score: 8
+  density: 6.22
+  words: 1287
+  tiers:
+    agentic: 0
+    core: 8
+    model: 0
+  ambiguous: 5
+  top_terms:
+    artificial intelligence: 5
+    intelligence: 5
+    AI: 1
+    LLMs: 1
+    large language model: 1
