@@ -55,7 +55,7 @@ tags_raw:
 - Managed Services
 - Low Latency
 created: '2026-07-21'
-modified: '2026-07-22'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: options-technology:activ-web-one-api
@@ -91,6 +91,8 @@ apis:
     and an in-browser playground are public; no OpenAPI or AsyncAPI spec is
     published.
 common:
+- url: https://www.options-it.com/feed/
+  type: BlogRSS
 - type: DomainSecurity
   url: security/options-technology-domain-security.yml
 - type: Website
